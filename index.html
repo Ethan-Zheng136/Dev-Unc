@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dexonomy: Synthesizing All Dexterous Grasp Types in a Grasp Taxonomy</title>
+  <!-- Bootstrap -->
+  <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+  <style>
+    body {
+      background: rgb(255, 255, 255) no-repeat fixed top left;
+      font-family: 'Open Sans', sans-serif;
+    }
+  </style>
+
+</head>
+
+<!-- cover -->
+<section>
+  <div class="jumbotron text-center mt-0">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col">
+          <h2 style="font-size:30px;">Dexonomy: Synthesizing All Dexterous Grasp Types in a Grasp Taxonomy </h2>
+          <h4 style="color:#6e6e6e;"> RSS 2025 </h4>
+          <hr>
+          <h6>
+            <a href="https://jychen18.github.io/">Jiayi Chen</a><sup>1,2*</sup>&nbsp; &nbsp;
+            <a href="https://gfrl.github.io/">Yubin Ke</a><sup>1,2*</sup>&nbsp; &nbsp;
+            Lin Peng<sup>2</sup>&nbsp; &nbsp;
+            <a href="https://hughw19.github.io/">He Wang</a><sup>1,2,3†</sup>
+            <br>
+            <br>
+            <p> <sup>1</sup>Peking University&nbsp; &nbsp;
+              <sup>2</sup>Galbot&nbsp; &nbsp;
+              <sup>3</sup>Beijing Academy of Artificial Intelligence&nbsp; &nbsp;
+              <br>
+            </p>
+            <p> <sup>*</sup> equal contributions &nbsp;
+              <sup>†</sup> corresponding author &nbsp;
+              <br>
+            </p>
+
+            <div class="row justify-content-center">
+              <div class="column">
+                <p class="mb-5"><a class="btn btn-large btn-light" href="https://arxiv.org/abs/2504.18829" role="button" target="_blank">
+                    <i class="fa fa-file"></i> Paper </a> </p>
+              </div>
+              <div class="column">
+                  <p class="mb-5"><a class="btn btn-large btn-light" href="https://github.com/JYChen18/Dexonomy" role="button" target="_blank">
+                <i class="fa fa-github-alt"></i> Code </a> </p>
+              </div>
+            </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container" style="width:58%">
+    <div class="row">
+      <div class="col-12 text-center">
+        <hr style="margin-top:0px">
+        <div class="row justify-content-center" style="align-items:center; display:flex;">
+          <img src="images/teaser.png" alt="input" class="img-responsive" width="100%" />
+          <br>
+        </div>
+        <p class="text-justify">
+          For any grasp type in the GRASP taxonomy, any object, and any articulated hand, our pipeline efficiently
+synthesizes contact-rich, penetration-free, and physically plausible dexterous grasps, starting from only one human-annotated
+grasp template to specify an initial hand pose and contact information per hand and grasp type.
+            
+        </p>
+        
+        <!-- </div> -->
+      </div>
+    </div>
+  </div>
+</section>
+<br>
+
+<!-- abstract -->
+<section>
+  <div class="container" style="width:58%">
+    <div class="row">
+      <div class="col-12">
+        <h2><strong>Abstract</strong></h2>
+        <hr style="margin-top:0px">
+        <p class="text-justify">
+          Generalizable dexterous grasping with suitable
+grasp types is a fundamental skill for intelligent robots. Developing such skills requires a large-scale and high-quality dataset
+that covers numerous grasp types (i.e., at least those categorized
+by the GRASP taxonomy), but collecting such data is extremely
+challenging. Existing automatic grasp synthesis methods are often
+limited to specific grasp types or object categories, hindering
+scalability. This work proposes an efficient pipeline capable
+of synthesizing contact-rich, penetration-free, and physically
+plausible grasps for any grasp type, object, and articulated hand.
+Starting from a single human-annotated template for each hand
+and grasp type, our pipeline tackles the complicated synthesis
+problem with two stages: optimize the object to fit the hand
+template first, and then locally refine the hand to fit the object
+in simulation. To validate the synthesized grasps, we introduce
+a contact-aware control strategy that allows the hand to apply
+the appropriate force at each contact point to the object. Those
+validated grasps can also be used as new grasp templates to
+facilitate future synthesis. Experiments show that our method
+significantly outperforms previous type-unaware grasp synthesis
+baselines in simulation. Using our algorithm, we construct a
+dataset containing 10.7k objects and 9.5M grasps, covering
+31 grasp types in the GRASP taxonomy. Finally, we train a
+type-conditional generative model that successfully performs the
+desired grasp type from single-view object point clouds, achieving
+an 82.3% success rate in real-world experiments
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<br>
+
+<section>
+  <div class="container" style="width:58%">
+    <div class="row">
+      <div class="col-12">
+        <h2><strong>Video</strong></h2>
+        <hr style="margin-top:0px">
+        <div class="row justify-content-center" style="align-items:center; display:flex;">
+          <video width="90%" playsinline="" preload="" muted="" controls>
+            <source src="videos/rss2025.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+<br>
+<br>
+
+<!-- citing -->
+<div class="container" style="width:58%">
+  <div class="row ">
+    <div class="col-12">
+      <h2><strong>Citation</strong></h2>
+      <hr style="margin-top:0px">
+      <pre style="background-color: #e9eeef;padding: 1.25em 1.5em">
+<code>@article{chen2025dexonomy,
+  title={Dexonomy: Synthesizing All Dexterous Grasp Types in a Grasp Taxonomy},
+  author={Chen, Jiayi and Ke, Yubin and Peng, Lin and Wang, He},
+  journal={Robotics: Science and Systems},
+  year={2025}
+}</code></pre>
+    </div>
+  </div>
+</div>
+<br>
+
+<!-- Contact -->
+<div class="container" style="width:58%">
+  <div class="row ">
+    <div class="col-12">
+      <h2><strong>Contact</strong></h2>
+      <hr style="margin-top:0px">
+      <p>If you have any questions, please feel free to contact <b>Jiayi Chen</b> at jiayichen@pku.edu.cn, 
+        <b>Yubin Ke</b> at 2200013213@stu.pku.edu.cn, and <b>He Wang</b> at hewang@pku.edu.cn.
+      </p>
+      </pre>
+    </div>
+  </div>
+</div>
+
+
+
+<footer class="text-center" style="margin-bottom:10px; font-size: medium;">
+  <hr>
+  Thanks to <a href="https://lioryariv.github.io/" target="_blank">Lior Yariv</a> for the <a
+    href="https://lioryariv.github.io/idr/" target="_blank">website template</a>.
+</footer>
+<script>
+  MathJax = {
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] }
+  };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</body>
+
+</html>
