@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dexonomy: Synthesizing All Dexterous Grasp Types in a Grasp Taxonomy</title>
+  <title> Delving into Mapping Uncertainty for Mapless Trajectory Prediction </title>
   <!-- Bootstrap -->
   <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
@@ -60,7 +60,7 @@
                     <i class="fa fa-file"></i> Paper </a> </p>
               </div>
               <div class="column">
-                  <p class="mb-5"><a class="btn btn-large btn-light" href="https://github.com/JYChen18/Dexonomy" role="button" target="_blank">
+                  <p class="mb-5"><a class="btn btn-large btn-light" href="https://github.com/Ethan-Zheng136/Map-Uncertainty-for-Trajectory-Prediction" role="button" target="_blank">
                 <i class="fa fa-github-alt"></i> Code </a> </p>
               </div>
               <div class="column">
@@ -68,7 +68,7 @@
                 <i class="fa fa-github-alt"></i> Dataset </a> </p>
               </div>
               <div class="column">
-                  <p class="mb-5"><a class="btn btn-large btn-light" href="https://github.com/JYChen18/DexLearn" role="button" target="_blank">
+                  <p class="mb-5"><a class="btn btn-large btn-light" href="https://www.nuscenes.org" role="button" target="_blank">
                 <i class="fa fa-github-alt"></i> Learning </a> </p>
               </div>
               <div class="column">
@@ -93,10 +93,7 @@
           <br>
         </div>
         <p class="text-justify">
-          For any grasp type in the GRASP taxonomy, any object, and any articulated hand, our pipeline efficiently
-synthesizes contact-rich, penetration-free, and physically plausible dexterous grasps, starting from only one human-annotated
-grasp template to specify an initial hand pose and contact information per hand and grasp type.
-            
+          We propose a lightweight, self-supervised approach that enhances the synergy between online mapping and trajectory prediction, providing interpretability on when and where map uncertainty is beneficial. Additionally, we introduce a covariance-based uncertainty modeling method that better aligns with road geometry. Extensive ablation studies show that our method outperforms previous integration strategies, achieving up to 23.6% improvement in mapless trajectory prediction on the nuScenes dataset.
         </p>
         
         <!-- </div> -->
@@ -114,31 +111,32 @@ grasp template to specify an initial hand pose and contact information per hand 
         <h2><strong>Abstract</strong></h2>
         <hr style="margin-top:0px">
         <p class="text-justify">
-          Generalizable dexterous grasping with suitable
-grasp types is a fundamental skill for intelligent robots. Developing such skills requires a large-scale and high-quality dataset
-that covers numerous grasp types (i.e., at least those categorized
-by the GRASP taxonomy), but collecting such data is extremely
-challenging. Existing automatic grasp synthesis methods are often
-limited to specific grasp types or object categories, hindering
-scalability. This work proposes an efficient pipeline capable
-of synthesizing contact-rich, penetration-free, and physically
-plausible grasps for any grasp type, object, and articulated hand.
-Starting from a single human-annotated template for each hand
-and grasp type, our pipeline tackles the complicated synthesis
-problem with two stages: optimize the object to fit the hand
-template first, and then locally refine the hand to fit the object
-in simulation. To validate the synthesized grasps, we introduce
-a contact-aware control strategy that allows the hand to apply
-the appropriate force at each contact point to the object. Those
-validated grasps can also be used as new grasp templates to
-facilitate future synthesis. Experiments show that our method
-significantly outperforms previous type-unaware grasp synthesis
-baselines in simulation. Using our algorithm, we construct a
-dataset containing 10.7k objects and 9.5M grasps, covering
-31 grasp types in the GRASP taxonomy. Finally, we train a
-type-conditional generative model that successfully performs the
-desired grasp type from single-view object point clouds, achieving
-an 82.3% success rate in real-world experiments
+          Recent advances in autonomous driving are mov-
+ing towards mapless approaches, where High-Definition (HD)
+maps are generated online directly from sensor data, reducing
+the need for expensive labeling and maintenance. However, the
+reliability of these online-generated maps remains uncertain.
+While incorporating map uncertainty into downstream tra-
+jectory prediction tasks has shown potential for performance
+improvements, current strategies provide limited insights into
+the specific scenarios where this uncertainty is beneficial. In this
+work, we first analyze the driving scenarios in which mapping
+uncertainty has the greatest positive impact on trajectory
+prediction and identify a critical, previously overlooked factor:
+the agent's kinematic state. Building on these insights, we
+propose a novel Proprioceptive Scenario Gating that adaptively
+integrates map uncertainty into trajectory prediction based on
+forecasts of the ego vehicle's future kinematics. This lightweight,
+self-supervised approach enhances the synergy between online
+mapping and trajectory prediction, providing interpretability
+around where uncertainty is advantageous and outperforming
+previous integration methods. Additionally, we introduce a
+Covariance-based Map Uncertainty approach that better aligns
+with map geometry, further improving trajectory prediction.
+Extensive ablation studies confirm the effectiveness of our
+approach, achieving up to 23.6% improvement in mapless tra-
+jectory prediction performance over the state-of-the-art method
+using the real-world nuScenes driving dataset.
         </p>
       </div>
     </div>
