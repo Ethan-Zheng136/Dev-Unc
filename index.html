@@ -83,26 +83,6 @@
   </div>
 </section>
 
-<section>
-  <div class="container" style="width:58%">
-    <div class="row">
-      <div class="col-12 text-center">
-        <hr style="margin-top:0px">
-        <div class="row justify-content-center" style="align-items:center; display:flex;">
-          <img src="images/pipeline.png" alt="input" class="img-responsive" width="100%" />
-          <br>
-        </div>
-        <p class="text-justify">
-          We propose a lightweight, self-supervised approach that enhances the synergy between online mapping and trajectory prediction, providing interpretability on when and where map uncertainty is beneficial. Additionally, we introduce a covariance-based uncertainty modeling method that better aligns with road geometry. Extensive ablation studies show that our method outperforms previous integration strategies, achieving up to 23.6% improvement in mapless trajectory prediction on the nuScenes dataset.
-        </p>
-        
-        <!-- </div> -->
-      </div>
-    </div>
-  </div>
-</section>
-<br>
-
 <!-- motivation -->
 <section>
   <div class="container" style="width:58%">
@@ -114,7 +94,8 @@
       <div class="col-md-6">
         <p class="text-justify" style="font-size: 15px;">
           <strong>Left:</strong> Baseline, <strong>Middle:</strong> Previous Uncertainty Integration,
-          <strong>Right:</strong> Ours. In (a), the comparison highlights that predictions enhanced with uncertainty can occasionally underperform
+          <strong>Right:</strong> Ours.<br><br>
+          In (a), the comparison highlights that predictions enhanced with uncertainty can occasionally underperform
           the baseline, underscoring the necessity of a Scenario Classifier to selectively incorporate uncertainty.
           Our method's predictions demonstrate more accurate and concentrated trajectories.<br><br>
           In (b), our covariance-based uncertainty modeling captures road curvature with such precision that the predicted
@@ -125,10 +106,10 @@
 
       <!-- Right: Two stacked images -->
       <div class="col-md-6 text-center">
-        <img src="images/teaser-1.svg" class="img-fluid mb-2" style="max-height:320px;" alt="Teaser 1">
+        <img src="images/teaser-1.svg" class="img-fluid mb-2" style="width:60%; max-height:320px;" alt="Teaser 1">
         <p><strong>(a)</strong> Motivation of the Scenario Classifier</p>
 
-        <img src="images/teaser-2.svg" class="img-fluid mt-3" style="max-height:320px;" alt="Teaser 2">
+        <img src="images/teaser-2.svg" class="img-fluid mt-3" style="width:60%; max-height:320px;" alt="Teaser 2">
         <p><strong>(b)</strong> Motivation of the Covariance-Based Uncertainty</p>
       </div>
     </div>
