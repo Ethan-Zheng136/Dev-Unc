@@ -105,15 +105,14 @@
     <div class="row">
       <div class="col-md-12">
         <p class="text-justify" style="font-size: 15px;">
-          <span style="font-weight: bold;">Left:</span> Baseline, 
-          <span style="font-weight: bold;">Middle:</span> Previous Uncertainty Integration,
-          <span style="font-weight: bold;">Right:</span> Ours.<br><br>
-          In (a), the comparison highlights that predictions enhanced with uncertainty can occasionally underperform
-          the baseline, underscoring the necessity of a Scenario Classifier to selectively incorporate uncertainty.
-          Our method's predictions demonstrate more accurate and concentrated trajectories.<br><br>
-          In (b), our covariance-based uncertainty modeling captures road curvature with such precision that the predicted
-          trajectories align well with the ground truth, rendering the true trajectory invisible within the visualization.
+          <span style="font-weight: 800;">Left:</span> Mapless trajectory prediction baseline (MapTRv2 [1] + HiVT [2]),
+          <span style="font-weight: 800;">Middle:</span> Previous uncertainty integration method [3],
+          <span style="font-weight: 800;">Right:</span> Ours.<br>
           <span style="color:pink;">Pink</span> indicates predicted trajectories, <span style="color:red;">red</span> shows the ground truth.
+          In (a), the comparison highlights that predictions enhanced with uncertainty occasionally underperform the baseline,
+          underscoring the necessity of a gating mechanism to selectively incorporate uncertainty. <br>
+          In (b), our Covariance-based Map Uncertainty captures road curvature with good precision that the predicted trajectories align well with the ground truth,
+          rendering the true trajectory invisible.
         </p>
       </div>
     </div>
